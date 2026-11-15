@@ -1,4 +1,5 @@
-#
+#Python is able to make reading a CSV file easier. Excel is able to make the data easy to read. 
+#A real business process that would benefit from an append-mode log file is if someone wanted to check the total data of something over time. 
 
 import csv
 from datetime import datetime
@@ -95,11 +96,3 @@ with open("data/sales.csv", "r") as file:
 
 for product in sorted(summary):
     print(f"{product}: ${summary[product]:.2f}")
-
-print("--Exercise 8--")
-
-current_time = datetime.now()
-with open("data/sales.csv", "a") as file:
-    file.write(f"{current_time} - Total Revenue ${total_revenue:.2f}\n")
-
-print("Run log updated!")
